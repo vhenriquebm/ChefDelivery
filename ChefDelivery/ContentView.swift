@@ -9,7 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        NavigationBar()
+        
+        VStack {
+            NavigationBar()
+            
+            ScrollView(.vertical, showsIndicators: false) {
+                
+                VStack(spacing: 20) {
+                    OrderTypeGridView()
+                    CarouselTabView()
+                }
+            }
+        }
     }
 }
 
@@ -17,6 +28,6 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-           
+        
     }
 }
