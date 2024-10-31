@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-
-struct HeaderView: View {
+struct NavigationBar: View {
     
     var body: some View {
         
@@ -40,7 +39,7 @@ struct HeaderView: View {
 
 struct HeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        HeaderView()
+        NavigationBar()
             .previewLayout(.sizeThatFits)
             .padding()
     }
