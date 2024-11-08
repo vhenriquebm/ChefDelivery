@@ -8,19 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
-    var restaurants = ["RESTAURANT 1", "RESTAURANT 2"]
     
     var body: some View {
         
-        VStack {
-            NavigationBar()
+        NavigationStack {
             
-            ScrollView(.vertical, showsIndicators: false) {
+            VStack {
+                NavigationBar()
                 
-                VStack(spacing: 20) {
-                    OrderTypeGridView()
-                    CarouselTabView()
-                    StoresContainerView()
+                ScrollView(.vertical, showsIndicators: false) {
+                    
+                    VStack(spacing: 20) {
+                        OrderTypeGridView()
+                        CarouselTabView()
+                        StoresContainerView()
+                    }
                 }
             }
         }
