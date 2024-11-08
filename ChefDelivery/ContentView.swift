@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
+    var restaurants = ["RESTAURANT 1", "RESTAURANT 2"]
+    
     var body: some View {
         
         VStack {
@@ -29,6 +31,5 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
-        
     }
 }
