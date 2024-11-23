@@ -16,6 +16,9 @@
 		425A8CB42CDEBC4D0098FF62 /* ProductType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8CB32CDEBC4D0098FF62 /* ProductType.swift */; };
 		425A8CD12CE56EC70098FF62 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 425A8CD02CE56EC70098FF62 /* Double+.swift */; };
 		426A16722CEFE86B00F5FD9C /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A16712CEFE86B00F5FD9C /* ProductDetailView.swift */; };
+		426A16762CF265C700F5FD9C /* StoreDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A16752CF265C700F5FD9C /* StoreDetailHeaderView.swift */; };
+		426A16782CF267C900F5FD9C /* StoreDetailProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A16772CF267C900F5FD9C /* StoreDetailProductsView.swift */; };
+		426A167A2CF2698E00F5FD9C /* StoreDetailProductItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A16792CF2698E00F5FD9C /* StoreDetailProductItemView.swift */; };
 		42BE62B22CD1474200F6C217 /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */; };
 		42BE62B42CD1474200F6C217 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62B32CD1474200F6C217 /* ContentView.swift */; };
 		42BE62B62CD1474400F6C217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42BE62B52CD1474400F6C217 /* Assets.xcassets */; };
@@ -37,6 +40,9 @@
 		425A8CB32CDEBC4D0098FF62 /* ProductType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductType.swift; sourceTree = "<group>"; };
 		425A8CD02CE56EC70098FF62 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		426A16712CEFE86B00F5FD9C /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		426A16752CF265C700F5FD9C /* StoreDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailHeaderView.swift; sourceTree = "<group>"; };
+		426A16772CF267C900F5FD9C /* StoreDetailProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductsView.swift; sourceTree = "<group>"; };
+		426A16792CF2698E00F5FD9C /* StoreDetailProductItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreDetailProductItemView.swift; sourceTree = "<group>"; };
 		42BE62AE2CD1474200F6C217 /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		42BE62B32CD1474200F6C217 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,9 +78,9 @@
 		4233BFBC2CD44655008FAAC7 /* StoresView */ = {
 			isa = PBXGroup;
 			children = (
+				426A16732CF2651900F5FD9C /* StoreDetailView */,
 				4233BFBD2CD44669008FAAC7 /* StoreItemView.swift */,
 				425A8CAD2CDE745E0098FF62 /* StoresContainerView.swift */,
-				425A8CAF2CDEAA5F0098FF62 /* StoresDetailView.swift */,
 			);
 			path = StoresView;
 			sourceTree = "<group>";
@@ -93,6 +99,26 @@
 				426A16712CEFE86B00F5FD9C /* ProductDetailView.swift */,
 			);
 			path = ProductView;
+			sourceTree = "<group>";
+		};
+		426A16732CF2651900F5FD9C /* StoreDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				425A8CAF2CDEAA5F0098FF62 /* StoresDetailView.swift */,
+				426A16752CF265C700F5FD9C /* StoreDetailHeaderView.swift */,
+				426A16772CF267C900F5FD9C /* StoreDetailProductsView.swift */,
+				426A16792CF2698E00F5FD9C /* StoreDetailProductItemView.swift */,
+			);
+			path = StoreDetailView;
+			sourceTree = "<group>";
+		};
+		426A16742CF2657200F5FD9C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */,
+				42BE62B32CD1474200F6C217 /* ContentView.swift */,
+			);
+			path = App;
 			sourceTree = "<group>";
 		};
 		42BE62A52CD1474200F6C217 = {
@@ -114,18 +140,16 @@
 		42BE62B02CD1474200F6C217 /* ChefDelivery */ = {
 			isa = PBXGroup;
 			children = (
+				426A16742CF2657200F5FD9C /* App */,
 				426A16702CEFE84B00F5FD9C /* ProductView */,
 				425A8CCF2CE56EB40098FF62 /* Extensions */,
-				4233BFBC2CD44655008FAAC7 /* StoresView */,
-				4233BFB72CD44227008FAAC7 /* CarouselView */,
-				42BE62C72CD2E80F00F6C217 /* Model */,
 				42BE62C12CD2E51D00F6C217 /* NavigationBar */,
 				42BE62C22CD2E54A00F6C217 /* GridView */,
-				42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */,
-				42BE62B32CD1474200F6C217 /* ContentView.swift */,
+				4233BFB72CD44227008FAAC7 /* CarouselView */,
+				4233BFBC2CD44655008FAAC7 /* StoresView */,
+				42BE62C72CD2E80F00F6C217 /* Model */,
 				42BE62B52CD1474400F6C217 /* Assets.xcassets */,
 				42BE62B72CD1474400F6C217 /* Preview Content */,
-				42BE62CC2CD2EA1B00F6C217 /* OrderTypeView.swift */,
 			);
 			path = ChefDelivery;
 			sourceTree = "<group>";
@@ -149,6 +173,7 @@
 		42BE62C22CD2E54A00F6C217 /* GridView */ = {
 			isa = PBXGroup;
 			children = (
+				42BE62CC2CD2EA1B00F6C217 /* OrderTypeView.swift */,
 				42BE62C52CD2E57E00F6C217 /* OrderTypeGridView.swift */,
 			);
 			path = GridView;
@@ -250,7 +275,10 @@
 				42BE62B22CD1474200F6C217 /* ChefDeliveryApp.swift in Sources */,
 				425A8CB22CDEBAA40098FF62 /* StoreType.swift in Sources */,
 				4233BFBB2CD4443D008FAAC7 /* CarouselTabView.swift in Sources */,
+				426A16782CF267C900F5FD9C /* StoreDetailProductsView.swift in Sources */,
 				425A8CB42CDEBC4D0098FF62 /* ProductType.swift in Sources */,
+				426A167A2CF2698E00F5FD9C /* StoreDetailProductItemView.swift in Sources */,
+				426A16762CF265C700F5FD9C /* StoreDetailHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
