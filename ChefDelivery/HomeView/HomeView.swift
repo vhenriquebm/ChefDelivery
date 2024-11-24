@@ -136,12 +136,12 @@ struct HomeView: View {
                                     if buttonOffset > (geometry.size.width - 60) / 2 {
                                         showSecondScreen = true
                                     } else {
-                                       
+                                        
                                     }
                                     
                                     withAnimation(.easeInOut(duration: 0.25)) {
                                         buttonOffset = 0
-
+                                        
                                     }
                                 })
                         )
