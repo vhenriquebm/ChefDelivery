@@ -9,22 +9,56 @@ import SwiftUI
 
 struct ContentView: View {
     
+    private var service = HomeService()
+    
+    @State private var stores: [StoreType] = []
+    @State private var isLoading = true
+    
     var body: some View {
         
         NavigationStack {
             
             VStack {
-                NavigationBar()
                 
-                ScrollView(.vertical, showsIndicators: false) {
+                if isLoading {
+                    ProgressView()
+                } else {
+                    NavigationBar()
                     
-                    VStack(spacing: 20) {
-                        OrderTypeGridView()
-                        CarouselTabView()
-                        StoresContainerView()
+                    ScrollView(.vertical, showsIndicators: false) {
+                        
+                        VStack(spacing: 20) {
+                            OrderTypeGridView()
+                            CarouselTabView()
+                            StoresContainerView(stores: stores)
+                        }
                     }
                 }
             }
+        }
+        .onAppear {
+            Task {
+                await getStores()
+            }
+        }
+    }
+    
+    private func getStores() async {
+        
+        do {
+            let result = try await service.fetchData()
+            
+            switch result {
+            case .success(let stores):
+                self.stores = stores
+                self.isLoading = false
+            case .failure(let error):
+                print(error.localizedDescription)
+                self.isLoading = false
+            }
+        } catch {
+            print(error)
+            self.isLoading = false
         }
     }
 }
