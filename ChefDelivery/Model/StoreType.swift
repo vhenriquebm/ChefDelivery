@@ -10,8 +10,8 @@ import Foundation
 struct StoreType: Identifiable, Decodable {
     let id: Int
     let name: String
-    let logoImage: String
-    let headerImage: String
+    let logoImage: String?
+    let headerImage: String?
     let location: String
     let stars: Int
     let products: [ProductType]
@@ -23,3 +23,13 @@ struct StoreType: Identifiable, Decodable {
        
     }
 }
+
+struct RestaurantSearch: Codable {
+    let id: Int
+    let name: String
+    let location: String
+    let stars: Int
+    let specialties: [String]
+}
+
+

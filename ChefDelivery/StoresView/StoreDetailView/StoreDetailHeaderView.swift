@@ -13,7 +13,7 @@ struct StoreDetailHeaderView: View {
     
     var body: some View {
         VStack {
-            Image(store.headerImage)
+            Image(store.headerImage ?? "")
                 .resizable()
                 .scaledToFit()
             
@@ -23,7 +23,7 @@ struct StoreDetailHeaderView: View {
                     .bold()
                 
                 Spacer()
-                Image(store.logoImage)
+                Image(store.logoImage ?? "")
             }
             .padding(.vertical, 8)
             .padding(.horizontal)

@@ -12,7 +12,7 @@ struct StoreItemView: View {
     
     var body: some View {
         HStack {
-            Image(store.logoImage)
+            Image(store.logoImage ?? "")
                 .resizable()
                 .scaledToFit()
                 .cornerRadius(25)
