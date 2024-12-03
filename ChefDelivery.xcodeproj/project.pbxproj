@@ -26,6 +26,7 @@
 		426A167C2CF26EF100F5FD9C /* ProductDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A167B2CF26EF100F5FD9C /* ProductDetailHeaderView.swift */; };
 		426A167E2CF26FD400F5FD9C /* ProductDetailQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A167D2CF26FD400F5FD9C /* ProductDetailQuantityView.swift */; };
 		426A16812CF2770700F5FD9C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426A16802CF2770700F5FD9C /* HomeView.swift */; };
+		429EC5A02CF9420900F4E063 /* SearchStoreViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 429EC59F2CF9420900F4E063 /* SearchStoreViewModelTests.swift */; };
 		42BE62B22CD1474200F6C217 /* ChefDeliveryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */; };
 		42BE62B42CD1474200F6C217 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62B32CD1474200F6C217 /* ContentView.swift */; };
 		42BE62B62CD1474400F6C217 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42BE62B52CD1474400F6C217 /* Assets.xcassets */; };
@@ -36,6 +37,16 @@
 		42BE62CB2CD2E88000F6C217 /* DataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62CA2CD2E88000F6C217 /* DataSourceMock.swift */; };
 		42BE62CD2CD2EA1B00F6C217 /* OrderTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42BE62CC2CD2EA1B00F6C217 /* OrderTypeView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		429EC5992CF9413500F4E063 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42BE62A62CD1474200F6C217 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42BE62AD2CD1474200F6C217;
+			remoteInfo = ChefDelivery;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4233BFB82CD4423B008FAAC7 /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
@@ -57,6 +68,8 @@
 		426A167B2CF26EF100F5FD9C /* ProductDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeaderView.swift; sourceTree = "<group>"; };
 		426A167D2CF26FD400F5FD9C /* ProductDetailQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailQuantityView.swift; sourceTree = "<group>"; };
 		426A16802CF2770700F5FD9C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		429EC5952CF9413400F4E063 /* ChefDeliveryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChefDeliveryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		429EC59F2CF9420900F4E063 /* SearchStoreViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchStoreViewModelTests.swift; sourceTree = "<group>"; };
 		42BE62AE2CD1474200F6C217 /* ChefDelivery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChefDelivery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		42BE62B12CD1474200F6C217 /* ChefDeliveryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChefDeliveryApp.swift; sourceTree = "<group>"; };
 		42BE62B32CD1474200F6C217 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +83,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		429EC5922CF9413400F4E063 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42BE62AB2CD1474200F6C217 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,10 +199,27 @@
 			path = HomeView;
 			sourceTree = "<group>";
 		};
+		429EC5962CF9413500F4E063 /* ChefDeliveryTests */ = {
+			isa = PBXGroup;
+			children = (
+				429EC59E2CF9417E00F4E063 /* ViewModel */,
+			);
+			path = ChefDeliveryTests;
+			sourceTree = "<group>";
+		};
+		429EC59E2CF9417E00F4E063 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				429EC59F2CF9420900F4E063 /* SearchStoreViewModelTests.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		42BE62A52CD1474200F6C217 = {
 			isa = PBXGroup;
 			children = (
 				42BE62B02CD1474200F6C217 /* ChefDelivery */,
+				429EC5962CF9413500F4E063 /* ChefDeliveryTests */,
 				42BE62AF2CD1474200F6C217 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -191,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				42BE62AE2CD1474200F6C217 /* ChefDelivery.app */,
+				429EC5952CF9413400F4E063 /* ChefDeliveryTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,6 +292,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		429EC5942CF9413400F4E063 /* ChefDeliveryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 429EC59B2CF9413500F4E063 /* Build configuration list for PBXNativeTarget "ChefDeliveryTests" */;
+			buildPhases = (
+				429EC5912CF9413400F4E063 /* Sources */,
+				429EC5922CF9413400F4E063 /* Frameworks */,
+				429EC5932CF9413400F4E063 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				429EC59A2CF9413500F4E063 /* PBXTargetDependency */,
+			);
+			name = ChefDeliveryTests;
+			productName = ChefDeliveryTests;
+			productReference = 429EC5952CF9413400F4E063 /* ChefDeliveryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		42BE62AD2CD1474200F6C217 /* ChefDelivery */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42BE62BC2CD1474400F6C217 /* Build configuration list for PBXNativeTarget "ChefDelivery" */;
@@ -283,6 +339,11 @@
 				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1540;
 				TargetAttributes = {
+					429EC5942CF9413400F4E063 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+						TestTargetID = 42BE62AD2CD1474200F6C217;
+					};
 					42BE62AD2CD1474200F6C217 = {
 						CreatedOnToolsVersion = 15.4;
 					};
@@ -304,11 +365,19 @@
 			projectRoot = "";
 			targets = (
 				42BE62AD2CD1474200F6C217 /* ChefDelivery */,
+				429EC5942CF9413400F4E063 /* ChefDeliveryTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		429EC5932CF9413400F4E063 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42BE62AC2CD1474200F6C217 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -321,6 +390,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		429EC5912CF9413400F4E063 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				429EC5A02CF9420900F4E063 /* SearchStoreViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42BE62AA2CD1474200F6C217 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,7 +433,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		429EC59A2CF9413500F4E063 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42BE62AD2CD1474200F6C217 /* ChefDelivery */;
+			targetProxy = 429EC5992CF9413500F4E063 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		429EC59C2CF9413500F4E063 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CTDN3273R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.vhenriquebm.ChefDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefDelivery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChefDelivery";
+			};
+			name = Debug;
+		};
+		429EC59D2CF9413500F4E063 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CTDN3273R3;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.vhenriquebm.ChefDeliveryTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChefDelivery.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ChefDelivery";
+			};
+			name = Release;
+		};
 		42BE62BA2CD1474400F6C217 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -537,6 +661,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		429EC59B2CF9413500F4E063 /* Build configuration list for PBXNativeTarget "ChefDeliveryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				429EC59C2CF9413500F4E063 /* Debug */,
+				429EC59D2CF9413500F4E063 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		42BE62A92CD1474200F6C217 /* Build configuration list for PBXProject "ChefDelivery" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
