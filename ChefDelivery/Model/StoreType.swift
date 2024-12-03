@@ -29,7 +29,7 @@ struct RestaurantSearch: Codable {
     let name: String
     let location: String
     let stars: Int
-    let specialties: [String]
+    let specialties: [String]?
 }
 
 

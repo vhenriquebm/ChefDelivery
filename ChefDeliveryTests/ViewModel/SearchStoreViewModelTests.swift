@@ -81,6 +81,42 @@ final class SearchStoreViewModelTests: XCTestCase {
         let filteredStores = sut.filteredStores()
         
         XCTAssertTrue(filteredStores.isEmpty)
+    }
+    
+    func testfilteredStoresUsingTerms() {
+        sut.storesType = [ RestaurantSearch(id: 1,
+                                            name: "Monstro Burger",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "pizza",
+                                                "lanchonete"
+                                            ]),
+                           
+                           RestaurantSearch(id: 2,
+                                            name: "Temaki",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "sushi",
+                                                "Japonês"
+                                            ]),
         
+                           RestaurantSearch(id: 3,
+                                            name: "Carbron",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "tacos",
+                                                "mexicana"
+                                            ]),
+        
+        ]
+        
+        
+        sut.searchText = "pizza"
+        let filteredStores = sut.filteredStores()
+        
+        XCTAssertEqual("Monstro Burger", filteredStores[0].name)
     }
 }
