@@ -7,6 +7,10 @@
 
 import Foundation
 
+protocol Searchable {
+    func matches(query: String) -> Bool
+}
+
 struct StoreType: Identifiable, Decodable {
     let id: Int
     let name: String
@@ -32,4 +36,12 @@ struct RestaurantSearch: Codable {
     let specialties: [String]?
 }
 
-
+extension RestaurantSearch: Searchable {
+    
+    func matches(query: String) -> Bool {
+        guard let specialities = specialties else { return false }
+        let parameters: [Searchable] = [name, specialities]
+        
+        return parameters.contains(where: { $0.matches(query: query.lowercased()) })
+    }
+}

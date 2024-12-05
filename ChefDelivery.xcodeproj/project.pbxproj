@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4217A8142D01276400C4DE26 /* String+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4217A8132D01276400C4DE26 /* String+.swift */; };
+		4217A8162D01279200C4DE26 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4217A8152D01279200C4DE26 /* Array+.swift */; };
 		4233BFB92CD4423B008FAAC7 /* CarouselItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4233BFB82CD4423B008FAAC7 /* CarouselItemView.swift */; };
 		4233BFBB2CD4443D008FAAC7 /* CarouselTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4233BFBA2CD4443D008FAAC7 /* CarouselTabView.swift */; };
 		4233BFBE2CD44669008FAAC7 /* StoreItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4233BFBD2CD44669008FAAC7 /* StoreItemView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4217A8132D01276400C4DE26 /* String+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+.swift"; sourceTree = "<group>"; };
+		4217A8152D01279200C4DE26 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
 		4233BFB82CD4423B008FAAC7 /* CarouselItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselItemView.swift; sourceTree = "<group>"; };
 		4233BFBA2CD4443D008FAAC7 /* CarouselTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselTabView.swift; sourceTree = "<group>"; };
 		4233BFBD2CD44669008FAAC7 /* StoreItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreItemView.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 			isa = PBXGroup;
 			children = (
 				425A8CD02CE56EC70098FF62 /* Double+.swift */,
+				4217A8132D01276400C4DE26 /* String+.swift */,
+				4217A8152D01279200C4DE26 /* Array+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,8 +418,10 @@
 				426A167E2CF26FD400F5FD9C /* ProductDetailQuantityView.swift in Sources */,
 				425A8CD12CE56EC70098FF62 /* Double+.swift in Sources */,
 				425A8CAE2CDE745E0098FF62 /* StoresContainerView.swift in Sources */,
+				4217A8142D01276400C4DE26 /* String+.swift in Sources */,
 				42BE62CD2CD2EA1B00F6C217 /* OrderTypeView.swift in Sources */,
 				4233BFBE2CD44669008FAAC7 /* StoreItemView.swift in Sources */,
+				4217A8162D01279200C4DE26 /* Array+.swift in Sources */,
 				425A8CB02CDEAA5F0098FF62 /* StoresDetailView.swift in Sources */,
 				4263F6B82CF9354D00295128 /* SearchService.swift in Sources */,
 				42BE62C62CD2E57E00F6C217 /* OrderTypeGridView.swift in Sources */,
