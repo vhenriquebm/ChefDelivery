@@ -39,14 +39,30 @@ struct SearchStoreView: View {
                     searchTextView
                         .listRowSeparator(.hidden)
                     
-                    ForEach(viewModel.filteredStores(), id: \.id) { store in
-                        Text(store.name)
-                            .font(.custom("Futura", size: 16))
-                            .listRowInsets(EdgeInsets())
-                            .listRowBackground(Color.clear)
-                            .listRowSeparator(.hidden)
-                            .padding(.horizontal, 20)
-                            .padding(.bottom, 30)
+                    if let filteredStores = try? viewModel.filteredStores() {
+                        ForEach(filteredStores, id: \.id) { store in
+                            Text(store.name)
+                                .font(.custom("Futura", size: 16))
+                                .listRowInsets(EdgeInsets())
+                                .listRowBackground(Color.clear)
+                                .listRowSeparator(.hidden)
+                                .padding(.horizontal, 20)
+                                .padding(.bottom, 30)
+                        }
+                    } else {
+                        VStack(alignment: .center) {
+                            Spacer()
+                            
+                            Image(systemName: "magnifyingglass")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                                .foregroundStyle(.gray)
+                                .padding(.top, 50)
+                                .frame(height: 100)
+                                .frame(maxWidth: .infinity)
+                            
+                            Spacer()
+                        }
                     }
                 }
                 .padding(.top, 15)
