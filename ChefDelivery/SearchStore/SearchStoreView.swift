@@ -63,6 +63,7 @@ struct SearchStoreView: View {
                             
                             Spacer()
                         }
+                        .listRowSeparator(.hidden)
                     }
                 }
                 .padding(.top, 15)

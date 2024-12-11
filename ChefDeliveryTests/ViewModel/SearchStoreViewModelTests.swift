@@ -38,21 +38,28 @@ final class SearchStoreViewModelTests: XCTestCase {
                                             location: "",
                                             stars: 4,
                                             specialties: []),
-        
+                           
                            RestaurantSearch(id: 3,
                                             name: "Carbron",
                                             location: "",
                                             stars: 4,
                                             specialties: []),
-        
+                           
         ]
         
         sut.searchText = "Ca"
+        var filteredStores: [RestaurantSearch] = []
         
-        let filteredStores = sut.filteredStores()
+        do {
+            filteredStores = try sut.filteredStores()
+            XCTAssertEqual(1, filteredStores.count)
+            XCTAssertEqual("Carbron", filteredStores[0].name)
+        } catch {
+            XCTFail("Failed to search stores")
+            print(error)
+        }
         
-        XCTAssertEqual(1, filteredStores.count)
-        XCTAssertEqual("Carbron", filteredStores[0].name)
+        
     }
     
     func testFilteredStoresWithSpecialCharactersInSearch() {
@@ -67,20 +74,26 @@ final class SearchStoreViewModelTests: XCTestCase {
                                             location: "",
                                             stars: 4,
                                             specialties: []),
-        
+                           
                            RestaurantSearch(id: 3,
                                             name: "Carbron",
                                             location: "",
                                             stars: 4,
                                             specialties: []),
-        
+                           
         ]
         
         sut.searchText = "!@#"
         
-        let filteredStores = sut.filteredStores()
+        var filteredStores: [RestaurantSearch] = []
         
-        XCTAssertTrue(filteredStores.isEmpty)
+        do {
+            filteredStores = try sut.filteredStores()
+            XCTFail("Failed to search")
+        } catch {
+            XCTAssertTrue(filteredStores.isEmpty)
+            
+        }
     }
     
     func testfilteredStoresUsingTerms() {
@@ -101,7 +114,7 @@ final class SearchStoreViewModelTests: XCTestCase {
                                                 "sushi",
                                                 "Japonês"
                                             ]),
-        
+                           
                            RestaurantSearch(id: 3,
                                             name: "Carbron",
                                             location: "",
@@ -110,13 +123,53 @@ final class SearchStoreViewModelTests: XCTestCase {
                                                 "tacos",
                                                 "mexicana"
                                             ]),
-        
+                           
         ]
         
-        
         sut.searchText = "pizza"
-        let filteredStores = sut.filteredStores()
         
-        XCTAssertEqual("Monstro Burger", filteredStores[0].name)
+        var filteredStores: [RestaurantSearch] = []
+        
+        do {
+            filteredStores = try sut.filteredStores()
+            XCTAssertEqual("Monstro Burger", filteredStores[0].name)
+        } catch {
+            XCTFail("Failed to search")
+        }
+    }
+    
+    func testFilteredStoresException() {
+        sut.storesType = [ RestaurantSearch(id: 1,
+                                            name: "Monstro Burger",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "pizza",
+                                                "lanchonete"
+                                            ]),
+                           
+                           RestaurantSearch(id: 2,
+                                            name: "Temaki",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "sushi",
+                                                "Japonês"
+                                            ]),
+                           
+                           RestaurantSearch(id: 3,
+                                            name: "Carbron",
+                                            location: "",
+                                            stars: 4,
+                                            specialties: [
+                                                "tacos",
+                                                "mexicana"
+                                            ]),
+                           
+        ]
+        
+        sut.searchText = "xxZZz"
+        
+        XCTAssertThrowsError(try sut.filteredStores())
     }
 }
